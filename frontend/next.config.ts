@@ -3,7 +3,7 @@ import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const projectRoot = dirname(fileURLToPath(import.meta.url))
-const backendApiUrl = process.env.BACKEND_API_URL || 'http://localhost:8080'
+const backendApiUrl = process.env.BACKEND_API_URL || 'http://localhost:8081'
 
 const nextConfig: NextConfig = {
   images: {

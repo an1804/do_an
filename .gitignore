@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+!.env.local.example
+*.local
+backend/src/main/resources/application.properties
+
+# Backend
+backend/target/
+*.class
+.mvn/wrapper/maven-wrapper.jar
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+
+# Logs
+*.log
