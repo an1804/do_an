@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useCallback, useContext, useEffect, useState } from 'react'
+import { hasStoredAuthSession } from '@/lib/api'
 import { logoutSession, restoreSession, type AuthUser } from '@/lib/auth'
 
 interface AuthContextType {
@@ -26,12 +27,23 @@ function getSameOriginRedirectUrl(redirectTo: string) {
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
   const refreshCurrentSession = useCallback(async () => {
+    if (!hasStoredAuthSession()) {
+      setUser(null)
+      setIsLoading(false)
+      return
+    }
+
     setIsLoading(true)
     try {
-      const sessionUser = await restoreSession()
+      const sessionUser = await Promise.race([
+        restoreSession(),
+        new Promise<never>((_, reject) => {
+          window.setTimeout(() => reject(new Error('Session restore timeout')), 2500)
+        }),
+      ])
       setUser(sessionUser)
     } catch {
       setUser(null)
