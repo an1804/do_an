@@ -1,4 +1,4 @@
-export type ProductCategory = 'phone' | 'laptop' | 'headphone' | 'accessory'
+export type ProductCategory = 'phone' | 'laptop' | 'accessory' | 'smartwatch' | 'tablet' | 'monitor' | 'tv'
 
 export type Product = {
   id: string
@@ -15,8 +15,11 @@ export type Product = {
 export const CATEGORIES: { slug: ProductCategory; label: string }[] = [
   { slug: 'phone', label: 'Điện thoại' },
   { slug: 'laptop', label: 'Laptop' },
-  { slug: 'headphone', label: 'Tai nghe' },
   { slug: 'accessory', label: 'Phụ kiện' },
+  { slug: 'smartwatch', label: 'Smartwatch' },
+  { slug: 'tablet', label: 'Tablet' },
+  { slug: 'monitor', label: 'Màn hình' },
+  { slug: 'tv', label: 'TV' },
 ]
 
 export const PRODUCTS: Product[] = [
@@ -117,7 +120,7 @@ export const PRODUCTS: Product[] = [
     id: 'p7',
     slug: 'airpods-pro-2',
     name: 'AirPods Pro 2 USB-C',
-    category: 'headphone',
+    category: 'accessory',
     price: 5_990_000,
     originalPrice: 6_490_000,
     image: 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=800&q=80',
@@ -133,7 +136,7 @@ export const PRODUCTS: Product[] = [
     id: 'p8',
     slug: 'sony-wh-1000xm5',
     name: 'Sony WH-1000XM5',
-    category: 'headphone',
+    category: 'accessory',
     price: 7_490_000,
     image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
     shortDescription: 'Over-ear chống ồn hàng đầu, đeo lâu không mỏi.',
@@ -148,7 +151,7 @@ export const PRODUCTS: Product[] = [
     id: 'p9',
     slug: 'galaxy-buds3-pro',
     name: 'Samsung Galaxy Buds3 Pro',
-    category: 'headphone',
+    category: 'accessory',
     price: 4_490_000,
     originalPrice: 4_990_000,
     image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80',
@@ -206,6 +209,70 @@ export const PRODUCTS: Product[] = [
       { label: 'Hệ điều hành', value: 'Windows, macOS' },
     ],
   },
+  {
+    id: 'p13',
+    slug: 'apple-watch-series-10',
+    name: 'Apple Watch Series 10 46mm GPS',
+    category: 'smartwatch',
+    price: 10_990_000,
+    originalPrice: 11_990_000,
+    image: 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=800&q=80',
+    shortDescription: 'Màn lớn hơn, đo sức khỏe, pin cả ngày.',
+    specs: [
+      { label: 'Màn hình', value: '46mm Retina LTPO3' },
+      { label: 'Kết nối', value: 'GPS, Bluetooth' },
+      { label: 'Kháng nước', value: '50m' },
+      { label: 'Pin', value: 'Đến 18 giờ' },
+    ],
+  },
+  {
+    id: 'p14',
+    slug: 'ipad-air-m2-11',
+    name: 'iPad Air M2 11 inch 128GB WiFi',
+    category: 'tablet',
+    price: 16_990_000,
+    originalPrice: 17_990_000,
+    image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80',
+    shortDescription: 'Chip M2, hỗ trợ Apple Pencil. Học tập và giải trí.',
+    specs: [
+      { label: 'Chip', value: 'Apple M2' },
+      { label: 'Màn hình', value: '11 inch Liquid Retina' },
+      { label: 'Lưu trữ', value: '128GB' },
+      { label: 'Kết nối', value: 'WiFi, USB-C' },
+    ],
+  },
+  {
+    id: 'p15',
+    slug: 'samsung-odyssey-g5-27',
+    name: 'Màn hình Samsung Odyssey G5 27 inch 165Hz',
+    category: 'monitor',
+    price: 5_490_000,
+    originalPrice: 6_490_000,
+    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80',
+    shortDescription: 'Cong 1000R, 165Hz. Chơi game và làm việc.',
+    specs: [
+      { label: 'Kích thước', value: '27 inch' },
+      { label: 'Tấm nền', value: 'VA, 2560x1440' },
+      { label: 'Tần số quét', value: '165Hz' },
+      { label: 'Cổng', value: 'HDMI, DisplayPort' },
+    ],
+  },
+  {
+    id: 'p16',
+    slug: 'samsung-crystal-uhd-55',
+    name: 'Smart TV Samsung Crystal UHD 55 inch',
+    category: 'tv',
+    price: 9_990_000,
+    originalPrice: 12_990_000,
+    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80',
+    shortDescription: '4K, Tizen, remote một lần nhấn. Xem phim và YouTube.',
+    specs: [
+      { label: 'Kích thước', value: '55 inch' },
+      { label: 'Độ phân giải', value: '4K UHD' },
+      { label: 'Hệ điều hành', value: 'Tizen' },
+      { label: 'Cổng', value: 'HDMI, USB, WiFi' },
+    ],
+  },
 ]
 
 export function formatVnd(amount: number) {
@@ -243,4 +310,25 @@ export function featuredProducts() {
   return PRODUCTS.filter((product) => Boolean(product.originalPrice)).concat(
     PRODUCTS.filter((product) => !product.originalPrice).slice(0, 2),
   )
+}
+
+export function saleProducts() {
+  return PRODUCTS.filter((product) => Boolean(product.originalPrice))
+}
+
+export function promoMeta(product: Product) {
+  const n = Number(product.id.replace(/\D/g, '')) || 1
+  const rating = Math.round((4.6 + ((n * 7) % 5) / 10) * 10) / 10
+  const sold = 80 + n * 137
+  const quotaTotal = [5, 10, 3][n % 3]
+  const quotaUsed = Math.min(quotaTotal, 1 + (n % quotaTotal))
+  return { rating, sold, quotaUsed, quotaTotal }
+}
+
+export function formatSold(count: number) {
+  if (count >= 1000) {
+    const compact = (count / 1000).toFixed(1).replace(/\.0$/, '').replace('.', ',')
+    return `Đã bán ${compact}k`
+  }
+  return `Đã bán ${count}`
 }

@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-inverse-surface text-inverse-on-surface">
       <div className="mx-auto grid max-w-[1200px] gap-8 px-4 py-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-base font-extrabold text-primary">TechStore</p>
+          <p className="font-display text-base font-extrabold text-primary">thegioicongnghe</p>
           <p className="mt-2 text-white/70">Cửa hàng điện thoại, laptop và phụ kiện.</p>
         </div>
         <div>
@@ -18,12 +18,12 @@ export default function Footer() {
         </div>
         <div>
           <p className="font-display font-semibold">Danh mục</p>
-          <p className="mt-2 text-white/70">Điện thoại · Laptop</p>
-          <p className="text-white/70">Tai nghe · Phụ kiện</p>
+          <p className="mt-2 text-white/70">Điện thoại · Laptop · Phụ kiện</p>
+          <p className="text-white/70">Smartwatch · Tablet · Màn hình · TV</p>
         </div>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-xs text-white/50">
-        © {new Date().getFullYear()} TechStore. Thiết kế lấy cảm hứng siêu thị điện máy, không thuộc MWG.
+        © {new Date().getFullYear()} thegioicongnghe. Thiết kế lấy cảm hứng siêu thị điện máy, không thuộc MWG.
       </div>
     </footer>
   )

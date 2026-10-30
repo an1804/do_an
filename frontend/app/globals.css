@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -10,8 +11,14 @@
   --color-secondary-container: #333333;
   --color-sale: #e31c25;
   --color-on-sale: #ffffff;
+  --color-buy-link: #2a83e9;
+  --color-buy-link-bg: #f1f8fe;
+  --color-star: #ffb400;
   --color-tertiary: #e31c25;
   --color-surface: #f5f5f5;
+  --color-slot-track: #f2f4f7;
+  --color-flash: #ff8c00;
+  --color-on-flash: #ffffff;
   --color-surface-container-lowest: #ffffff;
   --color-surface-container-low: #fafafa;
   --color-on-surface: #1a1a1a;
@@ -25,6 +32,7 @@
 
   --font-sans: 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Segoe UI', 'Be Vietnam Pro', sans-serif;
+  --font-header: Inter, 'Inter Fallback', sans-serif;
 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;

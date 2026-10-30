@@ -3,7 +3,7 @@ import { AuthProvider } from '@/contexts/AuthContext'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'TechStore',
+  title: 'thegioicongnghe',
   description: 'Website thương mại điện tử đồ công nghệ',
 }
 

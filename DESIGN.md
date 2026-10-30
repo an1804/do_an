@@ -186,6 +186,8 @@ Vàng cho thanh điều hướng và CTA phụ. Đen cho chữ, footer, logo. Đ
 
 ## Typography
 
+- **Inter 14px** — chữ trên header (danh mục, Đăng nhập / Voucher / Giỏ hàng, ô tìm). Màu `#111827`.
+- **Inter 24px / 700 / `#252A31` / line-height 36px** — tiêu đề khối Khuyến mãi online.
 - **Be Vietnam Pro** — logo, tiêu đề, nút, giá. Đậm, gần khách Việt.
 - **Roboto** — mô tả sản phẩm, form, footer (gần font site bán lẻ điện máy).
 
@@ -200,10 +202,11 @@ Desktop max **1200px** (gần layout thegioididong). Dày thông tin hơn BandHu
 
 | Vùng | Quy tắc |
 |------|---------|
-| Header | Nền `primary` full-width; logo trái, ô tìm kiếm giữa, tài khoản + giỏ phải |
-| Category strip | Hàng icon/chữ dưới header, nền trắng |
-| Home | Banner vàng-đen, rồi lưới danh mục, rồi sản phẩm |
-| Product card | Ảnh vuông, tên, giá đỏ, badge sale |
+| Promo bar | Dải vàng trên header, không sticky; campaign TechStore, không copy slogan MWG |
+| Header | Sticky, nền `primary`; logo + ô tìm trắng + Đăng nhập + Voucher + Giỏ hàng. Danh mục luôn hiện, không ẩn khi scroll |
+| Category strip | Icon + chữ trên vàng, cố định cùng header |
+| Home | Ngay dưới header: banner 1200×240 (`aspect 5/1`, `rounded-8px`, `object-contain`), tự chuyển ảnh; rồi tiêu đề Khuyến mãi online (Inter 24/700) ngoài hộp. Hộp trắng 1200×994, `rounded-16px`, `overflow-hidden`, `mt-5`. Trong hộp: tab FLASH SALE GIÁ SỐC + danh mục chữ, khung giờ countdown, lưới 6×2, mũi tên. Không copy badge/logo MWG |
+| Product card | Ảnh vuông, tên, giá đỏ, giá gốc gạch + `-%`, nút Mua ngay đỏ |
 | Footer | Nền `inverse-surface`, chữ trắng/xám |
 
 ## Elevation & Depth
@@ -229,7 +232,7 @@ Góc **vừa phải**, hơi vuông hơn BandHub.
 
 ### Header (`nav-header`)
 
-Nền vàng, chữ đen. Ô tìm kiếm trắng, bo pill. Không dùng sidebar tối kiểu dashboard BandHub cho storefront.
+Nền vàng, chữ đen, sticky. Hàng trên: logo sát trái, ô tìm trắng pill (~380px), nhóm Đăng nhập / Voucher / Giỏ hàng sát phải. Hàng danh mục nhỏ, trải đều theo chiều ngang container 1200px. Không dùng sidebar tối kiểu dashboard BandHub cho storefront.
 
 ### Buttons
 

@@ -8,7 +8,7 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group flex flex-col rounded-md border-2 border-outline bg-surface-container-lowest p-3 hover:border-primary"
+      className="group flex flex-col rounded-md border border-outline bg-surface-container-lowest p-3 hover:border-primary"
     >
       <div className="relative aspect-square overflow-hidden rounded-sm bg-surface-container-low">
         {discount > 0 ? (
@@ -25,14 +25,21 @@ export default function ProductCard({ product }: { product: Product }) {
           unoptimized
         />
       </div>
-      <h3 className="mt-3 line-clamp-2 min-h-12 font-display text-lg font-bold leading-6 text-on-surface">
+      <h3 className="mt-3 line-clamp-2 min-h-12 font-display text-base font-bold leading-6 text-on-surface">
         {product.name}
       </h3>
-      <p className="mt-2 min-h-5 text-sm text-on-surface-variant line-through">
-        {product.originalPrice ? formatVnd(product.originalPrice) : '\u00a0'}
+      <p className="mt-2 font-display text-lg font-bold text-sale">{formatVnd(product.price)}</p>
+      <p className="min-h-5 text-sm text-on-surface-variant">
+        {product.originalPrice ? (
+          <>
+            <span className="line-through">{formatVnd(product.originalPrice)}</span>
+            {discount > 0 ? <span className="ml-1 text-sale">-{discount}%</span> : null}
+          </>
+        ) : (
+          '\u00a0'
+        )}
       </p>
-      <p className="font-display text-lg font-bold text-sale">{formatVnd(product.price)}</p>
-      <span className="mt-3 inline-flex h-11 items-center justify-center rounded-md bg-sale font-display text-sm font-semibold text-on-sale group-hover:opacity-90">
+      <span className="mt-3 inline-flex h-10 items-center justify-center rounded-md bg-sale font-display text-sm font-semibold text-on-sale group-hover:opacity-90">
         Mua ngay
       </span>
     </Link>

@@ -1,74 +1,52 @@
 'use client'
 
 import Link from 'next/link'
+import { CartIcon, UserIcon, VoucherIcon } from '@/components/product/CategoryIcons'
+import SearchBox from '@/components/site/SearchBox'
 import { useAuth } from '@/contexts/AuthContext'
 import { getAccountPath } from '@/lib/auth'
-
-const navItems = [
-  { href: '/', label: 'Trang chủ' },
-  { href: '/products', label: 'Sản phẩm' },
-]
 
 export default function Header() {
   const { user, isLoading, logout } = useAuth()
   const accountPath = user ? getAccountPath(user.role) : '/login'
 
   return (
-    <header className="bg-primary text-on-primary">
-      <div className="mx-auto flex h-[72px] max-w-[1200px] items-center gap-4 px-4">
-        <Link href="/" className="shrink-0 font-display text-xl font-extrabold tracking-tight">
-          TechStore
-        </Link>
-        <form className="hidden flex-1 md:block" action="/products">
-          <label className="sr-only" htmlFor="site-search">
-            Tìm sản phẩm
-          </label>
-          <input
-            id="site-search"
-            name="q"
-            type="search"
-            placeholder="Bạn tìm gì..."
-            className="h-10 w-full rounded-full border-0 bg-white px-4 text-sm text-on-surface outline-none"
-          />
-        </form>
-        <nav className="ml-auto flex shrink-0 items-center gap-4 font-display text-sm font-semibold">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:underline">
-              {item.label}
+    <div className="mx-auto flex h-16 w-full max-w-[1200px] items-center gap-4 px-4">
+      <Link href="/" className="shrink-0 whitespace-nowrap font-header text-2xl font-extrabold leading-none tracking-tight">
+        thegioicongnghe
+      </Link>
+      <div className="flex min-w-0 flex-1 items-center gap-3">
+        <SearchBox />
+        <div className="flex shrink-0 items-center gap-6 font-medium">
+        {user ? (
+          <>
+            <Link href={accountPath} className="flex max-w-[140px] items-center gap-1 truncate hover:underline">
+              <UserIcon />
+              <span className="hidden lg:inline">{user.fullName || user.email}</span>
             </Link>
-          ))}
-          <div className="flex h-9 min-w-[168px] items-center justify-end gap-4">
-            {user ? (
-              <>
-                <Link href={accountPath} className="max-w-[140px] truncate hover:underline">
-                  {user.fullName || user.email}
-                </Link>
-                <button
-                  type="button"
-                  onClick={() => void logout('/')}
-                  className="rounded-md bg-secondary px-3 py-2 text-on-secondary hover:bg-secondary-container"
-                >
-                  Đăng xuất
-                </button>
-              </>
-            ) : (
-              <>
-                <Link href="/login" className={isLoading ? 'pointer-events-none opacity-60' : 'hover:underline'}>
-                  Đăng nhập
-                </Link>
-                <Link
-                  href="/register"
-                  className={`rounded-md bg-secondary px-3 py-2 text-on-secondary ${
-                    isLoading ? 'pointer-events-none opacity-60' : 'hover:bg-secondary-container'
-                  }`}
-                >
-                  Đăng ký
-                </Link>
-              </>
-            )}
-          </div>
-        </nav>
+            <button type="button" onClick={() => void logout('/')} className="hidden hover:underline lg:inline">
+              Đăng xuất
+            </button>
+          </>
+        ) : (
+          <Link
+            href="/login"
+            className={`flex items-center gap-1 ${isLoading ? 'pointer-events-none opacity-60' : 'hover:underline'}`}
+          >
+            <UserIcon />
+            <span className="hidden lg:inline">Đăng nhập</span>
+          </Link>
+        )}
+        <Link href="/vouchers" className="flex items-center gap-1 hover:underline">
+          <VoucherIcon />
+          <span className="hidden lg:inline">Voucher</span>
+        </Link>
+        <Link href="/cart" className="relative flex items-center gap-1 hover:underline">
+          <CartIcon />
+          <span className="hidden lg:inline">Giỏ hàng</span>
+        </Link>
+        </div>
       </div>
-    </header>
+    </div>
   )
 }

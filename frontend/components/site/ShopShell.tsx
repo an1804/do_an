@@ -1,6 +1,6 @@
-import CategoryStrip from '@/components/product/CategoryStrip'
 import Footer from '@/components/site/Footer'
-import Header from '@/components/site/Header'
+import StickyHeader from '@/components/site/StickyHeader'
+import TopPromoBar from '@/components/site/TopPromoBar'
 
 export default function ShopShell({
   children,
@@ -11,8 +11,8 @@ export default function ShopShell({
 }) {
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
-      <CategoryStrip active={activeCategory} />
+      <TopPromoBar />
+      <StickyHeader activeCategory={activeCategory} />
       <div className="flex-1">{children}</div>
       <Footer />
     </div>
