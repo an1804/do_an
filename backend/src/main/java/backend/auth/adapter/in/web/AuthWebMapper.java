@@ -15,6 +15,7 @@ final class AuthWebMapper {
                 .role(result.role())
                 .email(result.email())
                 .fullName(result.fullName())
+                .phone(result.phone())
                 .build();
     }
 }

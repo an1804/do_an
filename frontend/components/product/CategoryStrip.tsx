@@ -1,24 +1,15 @@
-import type { ReactNode } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
-import {
-  AccessoryIcon,
-  LaptopIcon,
-  MonitorIcon,
-  PhoneIcon,
-  TabletIcon,
-  TvIcon,
-  WatchIcon,
-} from '@/components/product/CategoryIcons'
 import { CATEGORIES, type ProductCategory } from '@/lib/products'
 
-const ICONS: Record<ProductCategory, ReactNode> = {
-  phone: <PhoneIcon />,
-  laptop: <LaptopIcon />,
-  accessory: <AccessoryIcon />,
-  smartwatch: <WatchIcon />,
-  tablet: <TabletIcon />,
-  monitor: <MonitorIcon />,
-  tv: <TvIcon />,
+const ICONS: Record<ProductCategory, string> = {
+  phone: '/icons/phone.png',
+  laptop: '/icons/laptop.png',
+  accessory: '/icons/accessory.png',
+  smartwatch: '/icons/smartwatch.png',
+  tablet: '/icons/tablet.png',
+  monitor: '/icons/monitor.png',
+  tv: '/icons/tv.png',
 }
 
 export default function CategoryStrip({ active }: { active?: string | null }) {
@@ -32,11 +23,18 @@ export default function CategoryStrip({ active }: { active?: string | null }) {
           <Link
             key={category.slug}
             href={`/products?category=${category.slug}`}
-            className={`flex shrink-0 items-center rounded-md py-1.5 ${
-              isActive ? 'bg-secondary px-2.5 text-on-secondary' : 'hover:opacity-70'
+            className={`flex shrink-0 items-center rounded-md px-2.5 py-1.5 ${
+              isActive ? 'bg-black/20' : 'hover:opacity-70'
             }`}
           >
-            {ICONS[category.slug]}
+            <Image
+              src={ICONS[category.slug]}
+              alt=""
+              width={24}
+              height={24}
+              className="h-5 w-5 object-contain"
+              unoptimized
+            />
             <span className="overflow-hidden text-nowrap pl-2">{category.label}</span>
           </Link>
         )

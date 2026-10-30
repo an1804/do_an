@@ -5,10 +5,12 @@ import backend.auth.domain.model.Account;
 import backend.auth.domain.model.Role;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
+@Order(1)
 public class AuthAccountSeeder implements CommandLineRunner {
 
     private final AuthAccountPort authAccountPort;

@@ -4,24 +4,24 @@ import { useMemo, useState } from 'react'
 import FlashSaleSlots from '@/components/home/FlashSaleSlots'
 import PromoProductCard from '@/components/home/PromoProductCard'
 import { ChevronLeftIcon, ChevronRightIcon } from '@/components/product/CategoryIcons'
-import { CATEGORIES, PRODUCTS, filterProducts, saleProducts, type ProductCategory } from '@/lib/products'
+import { CATEGORIES, filterProducts, saleProducts, type Product, type ProductCategory } from '@/lib/products'
 
 type Tab = 'sale' | ProductCategory
 
 const PAGE_SIZE = 12
 
-export default function PromoSection() {
+export default function PromoSection({ products: catalog }: { products: Product[] }) {
   const [tab, setTab] = useState<Tab>('sale')
   const [page, setPage] = useState(0)
 
   const products = useMemo(() => {
     if (tab === 'sale') {
-      const onSale = saleProducts()
-      const rest = PRODUCTS.filter((product) => !onSale.some((item) => item.id === product.id))
+      const onSale = saleProducts(catalog)
+      const rest = catalog.filter((product) => !onSale.some((item) => item.id === product.id))
       return [...onSale, ...rest]
     }
-    return filterProducts(undefined, tab)
-  }, [tab])
+    return filterProducts(catalog, undefined, tab)
+  }, [catalog, tab])
 
   const pageCount = Math.max(1, Math.ceil(products.length / PAGE_SIZE))
   const currentPage = Math.min(page, pageCount - 1)

@@ -1,0 +1,1491 @@
+[
+  {
+    "id": "p1",
+    "slug": "iphone-16-pro-256gb",
+    "name": "iPhone 16 Pro 256GB",
+    "category": "phone",
+    "price": 31990000,
+    "originalPrice": 34990000,
+    "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Titan, camera 48MP, chip A18 Pro. Phù hợp người dùng cần máy mạnh và chụp ảnh đẹp.",
+    "specs": [
+      {
+        "label": "Màn hình",
+        "value": "6.3 inch Super Retina XDR"
+      },
+      {
+        "label": "Chip",
+        "value": "A18 Pro"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 256GB"
+      },
+      {
+        "label": "Pin",
+        "value": "Sạc nhanh USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p2",
+    "slug": "samsung-galaxy-s25-ultra",
+    "name": "Samsung Galaxy S25 Ultra 256GB",
+    "category": "phone",
+    "price": 29490000,
+    "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn lớn, bút S Pen, zoom xa. Dành cho người làm việc và quay video.",
+    "specs": [
+      {
+        "label": "Màn hình",
+        "value": "6.9 inch Dynamic AMOLED 2X"
+      },
+      {
+        "label": "Chip",
+        "value": "Snapdragon 8 Elite"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "12GB / 256GB"
+      },
+      {
+        "label": "Camera",
+        "value": "200MP"
+      }
+    ]
+  },
+  {
+    "id": "p3",
+    "slug": "xiaomi-15",
+    "name": "Xiaomi 15 256GB",
+    "category": "phone",
+    "price": 18990000,
+    "originalPrice": 21990000,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Flagship gọn, giá dễ chịu hơn. Camera Leica, sạc nhanh.",
+    "specs": [
+      {
+        "label": "Màn hình",
+        "value": "6.36 inch AMOLED 120Hz"
+      },
+      {
+        "label": "Chip",
+        "value": "Snapdragon 8 Elite"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "12GB / 256GB"
+      },
+      {
+        "label": "Sạc",
+        "value": "90W"
+      }
+    ]
+  },
+  {
+    "id": "p4",
+    "slug": "macbook-air-m3-13",
+    "name": "MacBook Air M3 13 inch 16GB/256GB",
+    "category": "laptop",
+    "price": 27990000,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Mỏng nhẹ, pin lâu, yên tĩnh. Học tập và văn phòng.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Apple M3"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 256GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "13.6 inch Liquid Retina"
+      },
+      {
+        "label": "GPU",
+        "value": "Apple GPU"
+      },
+      {
+        "label": "Khối lượng",
+        "value": "1.24 kg"
+      }
+    ]
+  },
+  {
+    "id": "p5",
+    "slug": "asus-vivobook-15",
+    "name": "ASUS Vivobook 15 OLED i5 16GB/512GB",
+    "category": "laptop",
+    "price": 16490000,
+    "originalPrice": 18990000,
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn OLED đẹp, cấu hình đủ dùng học và làm việc.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core i5"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "15.6 inch OLED"
+      },
+      {
+        "label": "GPU",
+        "value": "Intel Arc"
+      },
+      {
+        "label": "Hệ điều hành",
+        "value": "Windows 11"
+      }
+    ]
+  },
+  {
+    "id": "p6",
+    "slug": "dell-xps-14",
+    "name": "Dell XPS 14 Ultra 7 16GB/1TB",
+    "category": "laptop",
+    "price": 42990000,
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Laptop cao cấp, màn sắc nét, làm đồ họa và code.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core Ultra 7"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 1TB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "14.5 inch OLED"
+      },
+      {
+        "label": "GPU",
+        "value": "Intel Arc"
+      },
+      {
+        "label": "Khối lượng",
+        "value": "1.68 kg"
+      }
+    ]
+  },
+  {
+    "id": "p7",
+    "slug": "airpods-pro-2",
+    "name": "AirPods Pro 2 USB-C",
+    "category": "accessory",
+    "price": 5990000,
+    "originalPrice": 6490000,
+    "image": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Chống ồn chủ động, xuyên âm, sạc USB-C.",
+    "specs": [
+      {
+        "label": "Kết nối",
+        "value": "Bluetooth / USB-C"
+      },
+      {
+        "label": "Chống ồn",
+        "value": "ANC + Adaptive Audio"
+      },
+      {
+        "label": "Pin",
+        "value": "Đến 6 giờ (tai nghe)"
+      },
+      {
+        "label": "Tương thích",
+        "value": "iPhone, iPad, Mac"
+      }
+    ]
+  },
+  {
+    "id": "p8",
+    "slug": "sony-wh-1000xm5",
+    "name": "Sony WH-1000XM5",
+    "category": "accessory",
+    "price": 7490000,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Over-ear chống ồn hàng đầu, đeo lâu không mỏi.",
+    "specs": [
+      {
+        "label": "Kiểu",
+        "value": "Over-ear không dây"
+      },
+      {
+        "label": "Chống ồn",
+        "value": "ANC"
+      },
+      {
+        "label": "Pin",
+        "value": "Đến 30 giờ"
+      },
+      {
+        "label": "Cổng",
+        "value": "USB-C, jack 3.5mm"
+      }
+    ]
+  },
+  {
+    "id": "p9",
+    "slug": "galaxy-buds3-pro",
+    "name": "Samsung Galaxy Buds3 Pro",
+    "category": "accessory",
+    "price": 4490000,
+    "originalPrice": 4990000,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Tai true wireless cho Galaxy, chống ồn tốt.",
+    "specs": [
+      {
+        "label": "Kết nối",
+        "value": "Bluetooth 5.4"
+      },
+      {
+        "label": "Chống ồn",
+        "value": "ANC"
+      },
+      {
+        "label": "Pin",
+        "value": "Đến 7 giờ (tai nghe)"
+      },
+      {
+        "label": "Chuẩn kháng",
+        "value": "IP57"
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "slug": "op-lung-iphone-16-pro",
+    "name": "Ốp lưng silicon iPhone 16 Pro",
+    "category": "accessory",
+    "price": 390000,
+    "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Ốp ôm máy, chống bám vân tay, có gờ bảo vệ camera.",
+    "specs": [
+      {
+        "label": "Tương thích",
+        "value": "iPhone 16 Pro"
+      },
+      {
+        "label": "Chất liệu",
+        "value": "Silicon"
+      },
+      {
+        "label": "Màu",
+        "value": "Đen"
+      },
+      {
+        "label": "Bảo vệ",
+        "value": "Gờ camera, cạnh viền"
+      }
+    ]
+  },
+  {
+    "id": "p11",
+    "slug": "cu-sac-45w",
+    "name": "Củ sạc nhanh 45W USB-C",
+    "category": "accessory",
+    "price": 590000,
+    "originalPrice": 790000,
+    "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Sạc điện thoại và laptop mỏng. Cổng USB-C.",
+    "specs": [
+      {
+        "label": "Công suất",
+        "value": "45W"
+      },
+      {
+        "label": "Cổng",
+        "value": "USB-C"
+      },
+      {
+        "label": "Chuẩn",
+        "value": "PD 3.0"
+      },
+      {
+        "label": "Tương thích",
+        "value": "Điện thoại, tablet, laptop mỏng"
+      }
+    ]
+  },
+  {
+    "id": "p12",
+    "slug": "logitech-mx-master-3s",
+    "name": "Chuột Logitech MX Master 3S",
+    "category": "accessory",
+    "price": 2290000,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Chuột văn phòng cao cấp, lăn siêu nhanh, dùng đa máy.",
+    "specs": [
+      {
+        "label": "Kết nối",
+        "value": "Bluetooth / Logi Bolt"
+      },
+      {
+        "label": "Cảm biến",
+        "value": "8000 DPI"
+      },
+      {
+        "label": "Pin",
+        "value": "Sạc USB-C, dùng nhiều tuần"
+      },
+      {
+        "label": "Hệ điều hành",
+        "value": "Windows, macOS"
+      }
+    ]
+  },
+  {
+    "id": "p13",
+    "slug": "apple-watch-series-10",
+    "name": "Apple Watch Series 10 46mm GPS",
+    "category": "smartwatch",
+    "price": 10990000,
+    "originalPrice": 11990000,
+    "image": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn lớn hơn, đo sức khỏe, pin cả ngày.",
+    "specs": [
+      {
+        "label": "Màn hình",
+        "value": "46mm Retina LTPO3"
+      },
+      {
+        "label": "Kết nối",
+        "value": "GPS, Bluetooth"
+      },
+      {
+        "label": "Kháng nước",
+        "value": "50m"
+      },
+      {
+        "label": "Pin",
+        "value": "Đến 18 giờ"
+      }
+    ]
+  },
+  {
+    "id": "p14",
+    "slug": "ipad-air-m2-11",
+    "name": "iPad Air M2 11 inch 128GB WiFi",
+    "category": "tablet",
+    "price": 16990000,
+    "originalPrice": 17990000,
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Chip M2, hỗ trợ Apple Pencil. Học tập và giải trí.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Apple M2"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 128GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "11 inch Liquid Retina"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p15",
+    "slug": "samsung-odyssey-g5-27",
+    "name": "Màn hình Samsung Odyssey G5 27 inch 165Hz",
+    "category": "monitor",
+    "price": 5490000,
+    "originalPrice": 6490000,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Cong 1000R, 165Hz. Chơi game và làm việc.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "VA, 2560x1440"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "165Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, DisplayPort"
+      }
+    ]
+  },
+  {
+    "id": "p16",
+    "slug": "samsung-crystal-uhd-55",
+    "name": "Smart TV Samsung Crystal UHD 55 inch",
+    "category": "tv",
+    "price": 9990000,
+    "originalPrice": 12990000,
+    "image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "4K, Tizen, remote một lần nhấn. Xem phim và YouTube.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "55 inch"
+      },
+      {
+        "label": "Độ phân giải",
+        "value": "4K UHD"
+      },
+      {
+        "label": "Hệ điều hành",
+        "value": "Tizen"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, USB, WiFi"
+      }
+    ]
+  },
+  {
+    "id": "p17",
+    "slug": "iphone-16-128gb",
+    "name": "iPhone 16 128GB",
+    "category": "phone",
+    "price": 22990000,
+    "originalPrice": 24990000,
+    "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Camera Control, chip A18. Máy tiêu chuẩn mới của Apple.",
+    "specs": [
+      {
+        "label": "Màn hình",
+        "value": "6.1 inch Super Retina XDR"
+      },
+      {
+        "label": "Chip",
+        "value": "A18"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 128GB"
+      },
+      {
+        "label": "Camera",
+        "value": "48MP"
+      }
+    ]
+  },
+  {
+    "id": "p18",
+    "slug": "oppo-reno13-256gb",
+    "name": "OPPO Reno13 5G 256GB",
+    "category": "phone",
+    "price": 10990000,
+    "originalPrice": 12990000,
+    "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Mỏng, selfie đẹp, sạc nhanh. Phân khúc tầm trung.",
+    "specs": [
+      {
+        "label": "Màn hình",
+        "value": "6.59 inch AMOLED 120Hz"
+      },
+      {
+        "label": "Chip",
+        "value": "Dimensity 8350"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "12GB / 256GB"
+      },
+      {
+        "label": "Sạc",
+        "value": "80W"
+      }
+    ]
+  },
+  {
+    "id": "p19",
+    "slug": "samsung-galaxy-a56",
+    "name": "Samsung Galaxy A56 5G 128GB",
+    "category": "phone",
+    "price": 8990000,
+    "originalPrice": 9990000,
+    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Pin trâu, IP67, cập nhật dài. Dùng lâu trong tầm giá.",
+    "specs": [
+      {
+        "label": "Màn hình",
+        "value": "6.7 inch Super AMOLED 120Hz"
+      },
+      {
+        "label": "Chip",
+        "value": "Exynos 1580"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 128GB"
+      },
+      {
+        "label": "Pin",
+        "value": "5000mAh"
+      }
+    ]
+  },
+  {
+    "id": "p20",
+    "slug": "vivo-v40-256gb",
+    "name": "vivo V40 5G 256GB",
+    "category": "phone",
+    "price": 12490000,
+    "originalPrice": 13490000,
+    "image": "https://images.unsplash.com/photo-1605236453806-6ff0755ea523?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Camera ZEISS, chống rung. Chụp ảnh và quay vlog.",
+    "specs": [
+      {
+        "label": "Màn hình",
+        "value": "6.78 inch AMOLED 120Hz"
+      },
+      {
+        "label": "Chip",
+        "value": "Snapdragon 7 Gen 3"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "12GB / 256GB"
+      },
+      {
+        "label": "Camera",
+        "value": "50MP ZEISS"
+      }
+    ]
+  },
+  {
+    "id": "p21",
+    "slug": "hp-pavilion-16-ultra5",
+    "name": "HP Pavilion 16 Intel Ultra 5 16GB/512GB",
+    "category": "laptop",
+    "price": 18990000,
+    "originalPrice": 20990000,
+    "image": "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn 16 inch, AI PC. Học tập và văn phòng.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core Ultra 5"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "16 inch IPS"
+      },
+      {
+        "label": "GPU",
+        "value": "Intel Arc"
+      }
+    ]
+  },
+  {
+    "id": "p22",
+    "slug": "lenovo-ideapad-slim-5",
+    "name": "Lenovo IdeaPad Slim 5 Ryzen 5 16GB/512GB",
+    "category": "laptop",
+    "price": 15490000,
+    "originalPrice": 17490000,
+    "image": "https://images.unsplash.com/photo-1484788984921-03950022c9ef?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Mỏng nhẹ, pin lâu. Sinh viên và làm việc.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "AMD Ryzen 5"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "14 inch OLED"
+      },
+      {
+        "label": "GPU",
+        "value": "AMD Radeon"
+      }
+    ]
+  },
+  {
+    "id": "p23",
+    "slug": "acer-aspire-5",
+    "name": "Acer Aspire 5 i5 16GB/512GB",
+    "category": "laptop",
+    "price": 14490000,
+    "originalPrice": 16490000,
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Giá dễ chịu, đủ dùng học và văn phòng.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core i5"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "15.6 inch IPS"
+      },
+      {
+        "label": "GPU",
+        "value": "Intel Arc"
+      }
+    ]
+  },
+  {
+    "id": "p24",
+    "slug": "msi-thin-15-rtx4050",
+    "name": "MSI Thin 15 i7 RTX 4050 16GB/512GB",
+    "category": "laptop",
+    "price": 22990000,
+    "originalPrice": 25990000,
+    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2304?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Gaming mỏng, RTX 4050. Chơi game và đồ họa.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core i7"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "15.6 inch 144Hz"
+      },
+      {
+        "label": "GPU",
+        "value": "RTX 4050"
+      }
+    ]
+  },
+  {
+    "id": "p25",
+    "slug": "gigabyte-g6-rtx4060",
+    "name": "Gigabyte G6 i7 RTX 4060 16GB/512GB",
+    "category": "laptop",
+    "price": 24990000,
+    "originalPrice": 27990000,
+    "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "RTX 4060, tản nhiệt tốt. Gaming tầm trung.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core i7"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "16 inch 165Hz"
+      },
+      {
+        "label": "GPU",
+        "value": "RTX 4060"
+      }
+    ]
+  },
+  {
+    "id": "p26",
+    "slug": "asus-rog-strix-g16",
+    "name": "ASUS ROG Strix G16 RTX 4070 16GB/1TB",
+    "category": "laptop",
+    "price": 39990000,
+    "originalPrice": 44990000,
+    "image": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "ROG gaming mạnh, RTX 4070. Chơi game nặng.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core i7"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 1TB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "16 inch 165Hz"
+      },
+      {
+        "label": "GPU",
+        "value": "RTX 4070"
+      }
+    ]
+  },
+  {
+    "id": "p27",
+    "slug": "macbook-pro-m4-14",
+    "name": "MacBook Pro M4 14 inch 16GB/512GB",
+    "category": "laptop",
+    "price": 39990000,
+    "image": "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Chip M4, màn XDR. Làm video và lập trình.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Apple M4"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "14.2 inch Liquid Retina XDR"
+      },
+      {
+        "label": "GPU",
+        "value": "Apple GPU"
+      }
+    ]
+  },
+  {
+    "id": "p28",
+    "slug": "hp-victus-16-rtx4060",
+    "name": "HP Victus 16 i7 RTX 4060 16GB/512GB",
+    "category": "laptop",
+    "price": 26490000,
+    "originalPrice": 28990000,
+    "image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Victus 16 inch, RTX 4060. Game và học đồ họa.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core i7"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "16 inch 144Hz"
+      },
+      {
+        "label": "GPU",
+        "value": "RTX 4060"
+      }
+    ]
+  },
+  {
+    "id": "p29",
+    "slug": "lenovo-legion-5-rtx4060",
+    "name": "Lenovo Legion 5 i7 RTX 4060 16GB/512GB",
+    "category": "laptop",
+    "price": 31990000,
+    "originalPrice": 34990000,
+    "image": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Legion tản nhiệt khỏe. Gaming và render.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core i7"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "16 inch 165Hz"
+      },
+      {
+        "label": "GPU",
+        "value": "RTX 4060"
+      }
+    ]
+  },
+  {
+    "id": "p30",
+    "slug": "dell-inspiron-15-i5",
+    "name": "Dell Inspiron 15 i5 16GB/512GB",
+    "category": "laptop",
+    "price": 16990000,
+    "originalPrice": 18490000,
+    "image": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Văn phòng bền, bàn phím êm. Học và làm việc.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core i5"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "16GB / 512GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "15.6 inch IPS"
+      },
+      {
+        "label": "GPU",
+        "value": "Intel Arc"
+      }
+    ]
+  },
+  {
+    "id": "p31",
+    "slug": "asus-zenbook-14-oled",
+    "name": "ASUS Zenbook 14 OLED Ultra 7 32GB/1TB",
+    "category": "laptop",
+    "price": 32990000,
+    "originalPrice": 35990000,
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "OLED, AI PC Ultra 7. Doanh nhân và sáng tạo.",
+    "specs": [
+      {
+        "label": "CPU",
+        "value": "Intel Core Ultra 7"
+      },
+      {
+        "label": "RAM / SSD",
+        "value": "32GB / 1TB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "14 inch OLED"
+      },
+      {
+        "label": "GPU",
+        "value": "Intel Arc"
+      }
+    ]
+  },
+  {
+    "id": "p32",
+    "slug": "samsung-galaxy-tab-s10-ultra",
+    "name": "Samsung Galaxy Tab S10 Ultra 256GB",
+    "category": "tablet",
+    "price": 24990000,
+    "originalPrice": 27990000,
+    "image": "https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn 14.6 inch, bút S Pen. Làm việc và vẽ.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Dimensity 9300+"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "12GB / 256GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "14.6 inch Dynamic AMOLED 2X"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p33",
+    "slug": "samsung-galaxy-tab-a9-plus",
+    "name": "Samsung Galaxy Tab A9+ 128GB",
+    "category": "tablet",
+    "price": 5490000,
+    "originalPrice": 6490000,
+    "image": "https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Giá dễ chịu, pin lâu. Học tập và xem phim.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Snapdragon 695"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 128GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "11 inch TFT"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p34",
+    "slug": "xiaomi-pad-7",
+    "name": "Xiaomi Pad 7 256GB",
+    "category": "tablet",
+    "price": 9990000,
+    "originalPrice": 10990000,
+    "image": "https://images.unsplash.com/photo-1589739900243-4b52cd9b30fa?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn 144Hz, loa bốn. Học và giải trí.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Snapdragon 7+ Gen 3"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 256GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "11.2 inch 144Hz"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p35",
+    "slug": "oppo-pad-3",
+    "name": "OPPO Pad 3 256GB",
+    "category": "tablet",
+    "price": 11490000,
+    "originalPrice": 12490000,
+    "image": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Mỏng, sạc nhanh. Ghi chú và xem phim.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Dimensity 8350"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 256GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "11.6 inch 144Hz"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p36",
+    "slug": "motorola-tab-g70",
+    "name": "Motorola Tab G70 128GB",
+    "category": "tablet",
+    "price": 4990000,
+    "originalPrice": 5490000,
+    "image": "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Android thuần, pin trâu. Học và giải trí cơ bản.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Helio G99"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "4GB / 128GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "11 inch IPS"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p37",
+    "slug": "lenovo-tab-p12",
+    "name": "Lenovo Tab P12 256GB",
+    "category": "tablet",
+    "price": 8990000,
+    "originalPrice": 9990000,
+    "image": "https://images.unsplash.com/photo-1647862532267-46c3c0d0b0a2?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn 12.7 inch, loa JBL. Học tập và giải trí.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Dimensity 7050"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 256GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "12.7 inch 3K"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p38",
+    "slug": "honor-pad-9",
+    "name": "HONOR Pad 9 256GB",
+    "category": "tablet",
+    "price": 7490000,
+    "originalPrice": 8490000,
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn 2.5K, 8 loa. Xem phim và học online.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Snapdragon 6 Gen 1"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 256GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "12.1 inch 2.5K"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p39",
+    "slug": "ipad-pro-m4-11",
+    "name": "iPad Pro M4 11 inch 256GB WiFi",
+    "category": "tablet",
+    "price": 28990000,
+    "originalPrice": 30990000,
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Chip M4, màn Tandem OLED. Làm đồ họa và video.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Apple M4"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 256GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "11 inch Ultra Retina XDR"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p40",
+    "slug": "ipad-11-a16-128gb",
+    "name": "iPad 11 A16 128GB WiFi",
+    "category": "tablet",
+    "price": 11990000,
+    "originalPrice": 12990000,
+    "image": "https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "iPad tiêu chuẩn, chip A16. Học tập và giải trí.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Apple A16"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "6GB / 128GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "11 inch Liquid Retina"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p41",
+    "slug": "xiaomi-redmi-pad-pro",
+    "name": "Xiaomi Redmi Pad Pro 128GB",
+    "category": "tablet",
+    "price": 6990000,
+    "originalPrice": 7990000,
+    "image": "https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Màn 12.1 inch 120Hz. Học và xem phim.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Snapdragon 7s Gen 2"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "6GB / 128GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "12.1 inch 120Hz"
+      },
+      {
+        "label": "Kết nối",
+        "value": "WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p42",
+    "slug": "samsung-galaxy-tab-s10-fe",
+    "name": "Samsung Galaxy Tab S10 FE 128GB 5G",
+    "category": "tablet",
+    "price": 13490000,
+    "originalPrice": 14990000,
+    "image": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "IP68, S Pen, 5G. Học và làm việc di động.",
+    "specs": [
+      {
+        "label": "Chip",
+        "value": "Exynos 1580"
+      },
+      {
+        "label": "RAM / ROM",
+        "value": "8GB / 128GB"
+      },
+      {
+        "label": "Màn hình",
+        "value": "10.9 inch TFT"
+      },
+      {
+        "label": "Kết nối",
+        "value": "5G, WiFi, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p43",
+    "slug": "msi-mag-275f",
+    "name": "Màn hình MSI MAG 275F 27 inch 180Hz",
+    "category": "monitor",
+    "price": 4990000,
+    "originalPrice": 5990000,
+    "image": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "IPS 180Hz. Chơi game và làm việc.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 1920x1080"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "180Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, DisplayPort"
+      }
+    ]
+  },
+  {
+    "id": "p44",
+    "slug": "asus-tuf-vg279q3a",
+    "name": "Màn hình ASUS TUF Gaming VG279Q3A 27 inch 180Hz",
+    "category": "monitor",
+    "price": 5290000,
+    "originalPrice": 5990000,
+    "image": "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "TUF 180Hz, Adaptive-Sync. Gaming.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 1920x1080"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "180Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, DisplayPort"
+      }
+    ]
+  },
+  {
+    "id": "p45",
+    "slug": "dell-s2725hs",
+    "name": "Màn hình Dell S2725HS 27 inch",
+    "category": "monitor",
+    "price": 4490000,
+    "originalPrice": 5290000,
+    "image": "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Dell Essential, mắt dịu. Văn phòng.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 1920x1080"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "100Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, VGA"
+      }
+    ]
+  },
+  {
+    "id": "p46",
+    "slug": "xiaomi-a27i",
+    "name": "Màn hình Xiaomi A27i 27 inch",
+    "category": "monitor",
+    "price": 3290000,
+    "originalPrice": 3790000,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Giá dễ chịu, 100Hz. Học và văn phòng.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 1920x1080"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "100Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI"
+      }
+    ]
+  },
+  {
+    "id": "p47",
+    "slug": "dell-p2425h",
+    "name": "Màn hình Dell P2425H 24 inch",
+    "category": "monitor",
+    "price": 3990000,
+    "originalPrice": 4490000,
+    "image": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "24 inch, chân đế chỉnh cao. Văn phòng.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "23.8 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 1920x1080"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "100Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, DisplayPort, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p48",
+    "slug": "msi-modern-md271p",
+    "name": "Màn hình MSI Modern MD271P 27 inch",
+    "category": "monitor",
+    "price": 3790000,
+    "originalPrice": 4290000,
+    "image": "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "Type-C, thiết kế tối giản. Văn phòng.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 1920x1080"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "75Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p49",
+    "slug": "asus-proart-pa279crv",
+    "name": "Màn hình ASUS ProArt PA279CRV 27 inch 4K",
+    "category": "monitor",
+    "price": 12990000,
+    "originalPrice": 14490000,
+    "image": "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "4K, màu chuẩn. Đồ họa và chỉnh ảnh.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 3840x2160"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "60Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, DisplayPort, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p50",
+    "slug": "samsung-viewfinity-s8",
+    "name": "Màn hình Samsung ViewFinity S8 27 inch 4K",
+    "category": "monitor",
+    "price": 9990000,
+    "originalPrice": 11490000,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "4K, Smart Calibration. Đồ họa.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 3840x2160"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "60Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, Mini DP, USB-C"
+      }
+    ]
+  },
+  {
+    "id": "p51",
+    "slug": "xiaomi-g-pro-27i",
+    "name": "Màn hình Xiaomi G Pro 27i 2K 180Hz",
+    "category": "monitor",
+    "price": 5990000,
+    "originalPrice": 6690000,
+    "image": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "2K 180Hz. Gaming và làm việc.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 2560x1440"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "180Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, DisplayPort"
+      }
+    ]
+  },
+  {
+    "id": "p52",
+    "slug": "asus-va27ehf",
+    "name": "Màn hình ASUS VA27EHF 27 inch",
+    "category": "monitor",
+    "price": 2990000,
+    "originalPrice": 3490000,
+    "image": "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "100Hz, mắt dịu. Học và văn phòng.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "27 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 1920x1080"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "100Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI"
+      }
+    ]
+  },
+  {
+    "id": "p53",
+    "slug": "msi-mag-323upf",
+    "name": "Màn hình MSI MAG 323UPF 32 inch 4K 160Hz",
+    "category": "monitor",
+    "price": 16990000,
+    "originalPrice": 18990000,
+    "image": "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&q=80",
+    "shortDescription": "32 inch 4K 160Hz. Gaming và đồ họa.",
+    "specs": [
+      {
+        "label": "Kích thước",
+        "value": "32 inch"
+      },
+      {
+        "label": "Tấm nền",
+        "value": "IPS, 3840x2160"
+      },
+      {
+        "label": "Tần số quét",
+        "value": "160Hz"
+      },
+      {
+        "label": "Cổng",
+        "value": "HDMI, DisplayPort, USB-C"
+      }
+    ]
+  }
+]

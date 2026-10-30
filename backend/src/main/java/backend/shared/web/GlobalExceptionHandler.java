@@ -1,6 +1,7 @@
 package backend.shared.web;
 
 import backend.shared.exception.AuthException;
+import backend.shared.exception.CatalogException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,14 @@ public class GlobalExceptionHandler {
                 .success(false)
                 .message("Du lieu khong hop le")
                 .data(errors)
+                .build());
+    }
+
+    @ExceptionHandler(CatalogException.class)
+    public ResponseEntity<ApiResponse<String>> handleCatalogException(CatalogException ex) {
+        return ResponseEntity.status(ex.getStatus()).body(ApiResponse.<String>builder()
+                .success(false)
+                .message(ex.getMessage())
                 .build());
     }
 

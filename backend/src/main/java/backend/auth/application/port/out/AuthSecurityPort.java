@@ -7,6 +7,8 @@ public interface AuthSecurityPort {
 
     String encodePassword(String rawPassword);
 
+    boolean matchesPassword(String rawPassword, String encodedPassword);
+
     String generateAccessToken(Account account);
 
     String generateRefreshToken(Account account);

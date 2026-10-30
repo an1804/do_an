@@ -12,6 +12,10 @@ public interface AuthAccountPort {
 
     Optional<Account> loadByEmail(String email);
 
+    Optional<Account> loadByCustomerPhone(String phone);
+
+    Optional<String> findCustomerPhoneByEmail(String email);
+
     Account saveCustomer(Account account, String phone);
 
     Account saveAccount(Account account, Role role, String shopName);

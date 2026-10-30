@@ -42,6 +42,21 @@ copy src\main\resources\application.properties.example src\main\resources\applic
 
 http://localhost:8081/api/health
 
+Catalog (public, không cần đăng nhập):
+
+- `GET /api/categories`
+- `GET /api/products?category=phone&q=`
+- `GET /api/products/{slug}`
+
+Seller (cookie JWT, role SELLER):
+
+- `GET /api/seller/products`
+- `POST /api/seller/products`
+- `PUT /api/seller/products/{id}`
+- `DELETE /api/seller/products/{id}` (ẩn SP)
+
+Lần chạy backend đầu tiên seed 7 danh mục và 53 sản phẩm mock vào `techstoredb`. Frontend đọc catalog qua API, không còn list trong `lib/products.ts`.
+
 TechStore dùng cổng **8081** (không dùng 8080 — cổng đó thường bị chiếm).
 Nếu báo `Port 8081 was already in use` thì backend **đã chạy**, chỉ việc mở link trên, **đừng** gõ `spring-boot:run` lần nữa.
 

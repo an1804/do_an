@@ -46,6 +46,16 @@ public class AuthPersistenceAdapter implements AuthAccountPort {
     }
 
     @Override
+    public Optional<Account> loadByCustomerPhone(String phone) {
+        return customerJpaRepository.findByPhoneWithAccount(phone).map(customer -> AccountPersistenceMapper.toDomain(customer.getAccount()));
+    }
+
+    @Override
+    public Optional<String> findCustomerPhoneByEmail(String email) {
+        return customerJpaRepository.findByAccount_EmailIgnoreCase(email).map(CustomerEntity::getPhone);
+    }
+
+    @Override
     public Account saveCustomer(Account account, String phone) {
         AccountEntity saved = accountJpaRepository.save(AccountPersistenceMapper.toNewEntity(account));
         CustomerEntity customer = new CustomerEntity();

@@ -5,6 +5,7 @@ public record AuthResult(
         String refreshToken,
         String role,
         String email,
-        String fullName
+        String fullName,
+        String phone
 ) {
 }

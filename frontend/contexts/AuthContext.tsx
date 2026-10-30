@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useCallback, useContext, useEffect, useState } from 'react'
+import AuthPromptModal from '@/components/auth/AuthPromptModal'
 import { hasStoredAuthSession } from '@/lib/api'
 import { logoutSession, restoreSession, type AuthUser } from '@/lib/auth'
 
@@ -8,6 +9,7 @@ interface AuthContextType {
   user: AuthUser | null
   login: (user: AuthUser) => void
   logout: (redirectTo?: string) => Promise<void>
+  openAuthPrompt: () => void
   isAuthenticated: boolean
   isLoading: boolean
 }
@@ -28,6 +30,7 @@ function getSameOriginRedirectUrl(redirectTo: string) {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [authPromptOpen, setAuthPromptOpen] = useState(false)
 
   const refreshCurrentSession = useCallback(async () => {
     if (!hasStoredAuthSession()) {
@@ -59,7 +62,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = (sessionUser: AuthUser) => {
     setUser(sessionUser)
     setIsLoading(false)
+    setAuthPromptOpen(false)
   }
+
+  const openAuthPrompt = () => setAuthPromptOpen(true)
 
   const logout = async (redirectTo?: string) => {
     try {
@@ -74,8 +80,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user, isLoading }}>
+    <AuthContext.Provider value={{ user, login, logout, openAuthPrompt, isAuthenticated: !!user, isLoading }}>
       {children}
+      <AuthPromptModal open={authPromptOpen} onClose={() => setAuthPromptOpen(false)} />
     </AuthContext.Provider>
   )
 }

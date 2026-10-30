@@ -22,259 +22,6 @@ export const CATEGORIES: { slug: ProductCategory; label: string }[] = [
   { slug: 'tv', label: 'TV' },
 ]
 
-export const PRODUCTS: Product[] = [
-  {
-    id: 'p1',
-    slug: 'iphone-16-pro-256gb',
-    name: 'iPhone 16 Pro 256GB',
-    category: 'phone',
-    price: 31_990_000,
-    originalPrice: 34_990_000,
-    image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Titan, camera 48MP, chip A18 Pro. Phù hợp người dùng cần máy mạnh và chụp ảnh đẹp.',
-    specs: [
-      { label: 'Màn hình', value: '6.3 inch Super Retina XDR' },
-      { label: 'Chip', value: 'A18 Pro' },
-      { label: 'RAM / ROM', value: '8GB / 256GB' },
-      { label: 'Pin', value: 'Sạc nhanh USB-C' },
-    ],
-  },
-  {
-    id: 'p2',
-    slug: 'samsung-galaxy-s25-ultra',
-    name: 'Samsung Galaxy S25 Ultra 256GB',
-    category: 'phone',
-    price: 29_490_000,
-    image: 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Màn lớn, bút S Pen, zoom xa. Dành cho người làm việc và quay video.',
-    specs: [
-      { label: 'Màn hình', value: '6.9 inch Dynamic AMOLED 2X' },
-      { label: 'Chip', value: 'Snapdragon 8 Elite' },
-      { label: 'RAM / ROM', value: '12GB / 256GB' },
-      { label: 'Camera', value: '200MP' },
-    ],
-  },
-  {
-    id: 'p3',
-    slug: 'xiaomi-15',
-    name: 'Xiaomi 15 256GB',
-    category: 'phone',
-    price: 18_990_000,
-    originalPrice: 21_990_000,
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Flagship gọn, giá dễ chịu hơn. Camera Leica, sạc nhanh.',
-    specs: [
-      { label: 'Màn hình', value: '6.36 inch AMOLED 120Hz' },
-      { label: 'Chip', value: 'Snapdragon 8 Elite' },
-      { label: 'RAM / ROM', value: '12GB / 256GB' },
-      { label: 'Sạc', value: '90W' },
-    ],
-  },
-  {
-    id: 'p4',
-    slug: 'macbook-air-m3-13',
-    name: 'MacBook Air M3 13 inch 16GB/256GB',
-    category: 'laptop',
-    price: 27_990_000,
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Mỏng nhẹ, pin lâu, yên tĩnh. Học tập và văn phòng.',
-    specs: [
-      { label: 'Chip', value: 'Apple M3' },
-      { label: 'RAM / SSD', value: '16GB / 256GB' },
-      { label: 'Màn hình', value: '13.6 inch Liquid Retina' },
-      { label: 'Khối lượng', value: '1.24 kg' },
-    ],
-  },
-  {
-    id: 'p5',
-    slug: 'asus-vivobook-15',
-    name: 'ASUS Vivobook 15 OLED i5 16GB/512GB',
-    category: 'laptop',
-    price: 16_490_000,
-    originalPrice: 18_990_000,
-    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Màn OLED đẹp, cấu hình đủ dùng học và làm việc.',
-    specs: [
-      { label: 'CPU', value: 'Intel Core i5' },
-      { label: 'RAM / SSD', value: '16GB / 512GB' },
-      { label: 'Màn hình', value: '15.6 inch OLED' },
-      { label: 'Hệ điều hành', value: 'Windows 11' },
-    ],
-  },
-  {
-    id: 'p6',
-    slug: 'dell-xps-14',
-    name: 'Dell XPS 14 Ultra 7 16GB/1TB',
-    category: 'laptop',
-    price: 42_990_000,
-    image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Laptop cao cấp, màn sắc nét, làm đồ họa và code.',
-    specs: [
-      { label: 'CPU', value: 'Intel Core Ultra 7' },
-      { label: 'RAM / SSD', value: '16GB / 1TB' },
-      { label: 'Màn hình', value: '14.5 inch OLED' },
-      { label: 'Khối lượng', value: '1.68 kg' },
-    ],
-  },
-  {
-    id: 'p7',
-    slug: 'airpods-pro-2',
-    name: 'AirPods Pro 2 USB-C',
-    category: 'accessory',
-    price: 5_990_000,
-    originalPrice: 6_490_000,
-    image: 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Chống ồn chủ động, xuyên âm, sạc USB-C.',
-    specs: [
-      { label: 'Kết nối', value: 'Bluetooth / USB-C' },
-      { label: 'Chống ồn', value: 'ANC + Adaptive Audio' },
-      { label: 'Pin', value: 'Đến 6 giờ (tai nghe)' },
-      { label: 'Tương thích', value: 'iPhone, iPad, Mac' },
-    ],
-  },
-  {
-    id: 'p8',
-    slug: 'sony-wh-1000xm5',
-    name: 'Sony WH-1000XM5',
-    category: 'accessory',
-    price: 7_490_000,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Over-ear chống ồn hàng đầu, đeo lâu không mỏi.',
-    specs: [
-      { label: 'Kiểu', value: 'Over-ear không dây' },
-      { label: 'Chống ồn', value: 'ANC' },
-      { label: 'Pin', value: 'Đến 30 giờ' },
-      { label: 'Cổng', value: 'USB-C, jack 3.5mm' },
-    ],
-  },
-  {
-    id: 'p9',
-    slug: 'galaxy-buds3-pro',
-    name: 'Samsung Galaxy Buds3 Pro',
-    category: 'accessory',
-    price: 4_490_000,
-    originalPrice: 4_990_000,
-    image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Tai true wireless cho Galaxy, chống ồn tốt.',
-    specs: [
-      { label: 'Kết nối', value: 'Bluetooth 5.4' },
-      { label: 'Chống ồn', value: 'ANC' },
-      { label: 'Pin', value: 'Đến 7 giờ (tai nghe)' },
-      { label: 'Chuẩn kháng', value: 'IP57' },
-    ],
-  },
-  {
-    id: 'p10',
-    slug: 'op-lung-iphone-16-pro',
-    name: 'Ốp lưng silicon iPhone 16 Pro',
-    category: 'accessory',
-    price: 390_000,
-    image: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Ốp ôm máy, chống bám vân tay, có gờ bảo vệ camera.',
-    specs: [
-      { label: 'Tương thích', value: 'iPhone 16 Pro' },
-      { label: 'Chất liệu', value: 'Silicon' },
-      { label: 'Màu', value: 'Đen' },
-      { label: 'Bảo vệ', value: 'Gờ camera, cạnh viền' },
-    ],
-  },
-  {
-    id: 'p11',
-    slug: 'cu-sac-45w',
-    name: 'Củ sạc nhanh 45W USB-C',
-    category: 'accessory',
-    price: 590_000,
-    originalPrice: 790_000,
-    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Sạc điện thoại và laptop mỏng. Cổng USB-C.',
-    specs: [
-      { label: 'Công suất', value: '45W' },
-      { label: 'Cổng', value: 'USB-C' },
-      { label: 'Chuẩn', value: 'PD 3.0' },
-      { label: 'Tương thích', value: 'Điện thoại, tablet, laptop mỏng' },
-    ],
-  },
-  {
-    id: 'p12',
-    slug: 'logitech-mx-master-3s',
-    name: 'Chuột Logitech MX Master 3S',
-    category: 'accessory',
-    price: 2_290_000,
-    image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Chuột văn phòng cao cấp, lăn siêu nhanh, dùng đa máy.',
-    specs: [
-      { label: 'Kết nối', value: 'Bluetooth / Logi Bolt' },
-      { label: 'Cảm biến', value: '8000 DPI' },
-      { label: 'Pin', value: 'Sạc USB-C, dùng nhiều tuần' },
-      { label: 'Hệ điều hành', value: 'Windows, macOS' },
-    ],
-  },
-  {
-    id: 'p13',
-    slug: 'apple-watch-series-10',
-    name: 'Apple Watch Series 10 46mm GPS',
-    category: 'smartwatch',
-    price: 10_990_000,
-    originalPrice: 11_990_000,
-    image: 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Màn lớn hơn, đo sức khỏe, pin cả ngày.',
-    specs: [
-      { label: 'Màn hình', value: '46mm Retina LTPO3' },
-      { label: 'Kết nối', value: 'GPS, Bluetooth' },
-      { label: 'Kháng nước', value: '50m' },
-      { label: 'Pin', value: 'Đến 18 giờ' },
-    ],
-  },
-  {
-    id: 'p14',
-    slug: 'ipad-air-m2-11',
-    name: 'iPad Air M2 11 inch 128GB WiFi',
-    category: 'tablet',
-    price: 16_990_000,
-    originalPrice: 17_990_000,
-    image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Chip M2, hỗ trợ Apple Pencil. Học tập và giải trí.',
-    specs: [
-      { label: 'Chip', value: 'Apple M2' },
-      { label: 'Màn hình', value: '11 inch Liquid Retina' },
-      { label: 'Lưu trữ', value: '128GB' },
-      { label: 'Kết nối', value: 'WiFi, USB-C' },
-    ],
-  },
-  {
-    id: 'p15',
-    slug: 'samsung-odyssey-g5-27',
-    name: 'Màn hình Samsung Odyssey G5 27 inch 165Hz',
-    category: 'monitor',
-    price: 5_490_000,
-    originalPrice: 6_490_000,
-    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80',
-    shortDescription: 'Cong 1000R, 165Hz. Chơi game và làm việc.',
-    specs: [
-      { label: 'Kích thước', value: '27 inch' },
-      { label: 'Tấm nền', value: 'VA, 2560x1440' },
-      { label: 'Tần số quét', value: '165Hz' },
-      { label: 'Cổng', value: 'HDMI, DisplayPort' },
-    ],
-  },
-  {
-    id: 'p16',
-    slug: 'samsung-crystal-uhd-55',
-    name: 'Smart TV Samsung Crystal UHD 55 inch',
-    category: 'tv',
-    price: 9_990_000,
-    originalPrice: 12_990_000,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80',
-    shortDescription: '4K, Tizen, remote một lần nhấn. Xem phim và YouTube.',
-    specs: [
-      { label: 'Kích thước', value: '55 inch' },
-      { label: 'Độ phân giải', value: '4K UHD' },
-      { label: 'Hệ điều hành', value: 'Tizen' },
-      { label: 'Cổng', value: 'HDMI, USB, WiFi' },
-    ],
-  },
-]
-
 export function formatVnd(amount: number) {
   return `${new Intl.NumberFormat('vi-VN').format(amount)}₫`
 }
@@ -288,32 +35,186 @@ export function categoryLabel(slug: ProductCategory) {
   return CATEGORIES.find((item) => item.slug === slug)?.label ?? slug
 }
 
-export function getProductBySlug(slug: string) {
-  return PRODUCTS.find((product) => product.slug === slug)
+export function getProductBySlug(products: Product[], slug: string) {
+  return products.find((product) => product.slug === slug)
 }
 
-export function filterProducts(query?: string, category?: string) {
+export function productBrand(product: Product) {
+  const name = product.name.toLowerCase()
+  if (product.category === 'monitor') {
+    if (name.includes('samsung') || name.includes('odyssey') || name.includes('viewfinity')) return 'samsung'
+    if (name.includes('msi')) return 'msi'
+    if (name.includes('asus') || name.includes('tuf') || name.includes('proart')) return 'asus'
+    if (name.includes('dell')) return 'dell'
+    if (name.includes('xiaomi')) return 'xiaomi'
+    return 'other'
+  }
+  if (product.category === 'tablet') {
+    if (name.includes('ipad') || name.includes('apple')) return 'ipad'
+    if (name.includes('samsung') || name.includes('galaxy')) return 'samsung'
+    if (name.includes('xiaomi') || name.includes('redmi')) return 'xiaomi'
+    if (name.includes('oppo')) return 'oppo'
+    if (name.includes('motorola') || name.includes('moto')) return 'motorola'
+    if (name.includes('lenovo')) return 'lenovo'
+    if (name.includes('honor')) return 'honor'
+    return 'other'
+  }
+  if (product.category === 'laptop') {
+    if (name.includes('macbook') || name.includes('apple')) return 'macbook'
+    if (name.includes('asus') || name.includes('vivobook') || name.includes('zenbook') || name.includes('rog')) return 'asus'
+    if (name.includes('hp') || name.includes('pavilion') || name.includes('victus')) return 'hp'
+    if (name.includes('dell') || name.includes('xps') || name.includes('inspiron')) return 'dell'
+    if (name.includes('lenovo') || name.includes('ideapad') || name.includes('legion')) return 'lenovo'
+    if (name.includes('acer') || name.includes('aspire') || name.includes('nitro')) return 'acer'
+    if (name.includes('msi')) return 'msi'
+    if (name.includes('gigabyte')) return 'gigabyte'
+    return 'other'
+  }
+  if (name.includes('iphone') || name.includes('apple')) return 'apple'
+  if (name.includes('samsung') || name.includes('galaxy')) return 'samsung'
+  if (name.includes('xiaomi')) return 'xiaomi'
+  if (name.includes('oppo')) return 'oppo'
+  if (name.includes('vivo')) return 'vivo'
+  if (name.includes('realme')) return 'realme'
+  if (name.includes('nokia')) return 'nokia'
+  return 'other'
+}
+
+export function filterProducts(products: Product[], query?: string, category?: string, brand?: string) {
   const normalizedQuery = query?.trim().toLowerCase() ?? ''
   const normalizedCategory = category?.trim() as ProductCategory | undefined
+  const normalizedBrand = brand?.trim().toLowerCase() ?? ''
 
-  return PRODUCTS.filter((product) => {
+  return products.filter((product) => {
     const matchCategory = !normalizedCategory || product.category === normalizedCategory
     const matchQuery =
       !normalizedQuery ||
       product.name.toLowerCase().includes(normalizedQuery) ||
       categoryLabel(product.category).toLowerCase().includes(normalizedQuery)
-    return matchCategory && matchQuery
+    const matchBrand = !normalizedBrand || productBrand(product) === normalizedBrand
+    return matchCategory && matchQuery && matchBrand
   })
 }
 
-export function featuredProducts() {
-  return PRODUCTS.filter((product) => Boolean(product.originalPrice)).concat(
-    PRODUCTS.filter((product) => !product.originalPrice).slice(0, 2),
+export function sortProducts(products: Product[], sort: string) {
+  const list = [...products]
+  if (sort === 'new') {
+    return list.sort((a, b) => Number(b.id.replace(/\D/g, '')) - Number(a.id.replace(/\D/g, '')))
+  }
+  if (sort === 'sold') {
+    return list.sort((a, b) => promoMeta(b).sold - promoMeta(a).sold)
+  }
+  if (sort === 'discount') {
+    return list.sort((a, b) => discountPercent(b) - discountPercent(a))
+  }
+  if (sort === 'price' || sort === 'price-asc') {
+    return list.sort((a, b) => a.price - b.price)
+  }
+  if (sort === 'price-desc') {
+    return list.sort((a, b) => b.price - a.price)
+  }
+  return list
+}
+
+export function featuredProducts(products: Product[]) {
+  return products.filter((product) => Boolean(product.originalPrice)).concat(
+    products.filter((product) => !product.originalPrice).slice(0, 2),
   )
 }
 
-export function saleProducts() {
-  return PRODUCTS.filter((product) => Boolean(product.originalPrice))
+export function saleProducts(products: Product[]) {
+  return products.filter((product) => Boolean(product.originalPrice))
+}
+
+export function listingMeta(product: Product) {
+  if (product.category === 'monitor') {
+    const size = product.specs.find((item) => item.label === 'Kích thước')?.value ?? ''
+    const panel = (product.specs.find((item) => item.label === 'Tấm nền')?.value ?? '').split(',')[0].trim()
+    const hz = product.specs.find((item) => item.label === 'Tần số quét')?.value ?? ''
+    const specChips = [panel, hz, size.replace(/inch/i, '"').replace(/\s+"/,'"')].filter(Boolean)
+    return {
+      specChips,
+      storages: [],
+      defaultStorage: '',
+      colors: { samsung: ['#1C1C1C', '#C5A46E', '#4B7BBE'], msi: ['#C8102E', '#1A1A1A', '#C0C0C0'], asus: ['#1A1A1A', '#00A3E0', '#C0C0C0'], dell: ['#007DB8', '#1A1A1A', '#C0C0C0'], xiaomi: ['#1A1A1A', '#2F6FED', '#C0C0C0'] }[
+        productBrand(product)
+      ] ?? ['#1A1A1A', '#C0C0C0', '#4A90D9'],
+    }
+  }
+
+  const screen = product.specs.find((item) => item.label === 'Màn hình')?.value ?? ''
+  const screenMatch = screen.match(/^(\d+(?:\.\d+)?)\s*inch\s+(.+)$/i)
+  const specChips = screenMatch ? [screenMatch[2], `${screenMatch[1]}"`] : []
+
+  const romSpec =
+    product.specs.find((item) => item.label === 'RAM / ROM')?.value ??
+    product.specs.find((item) => item.label === 'RAM / SSD')?.value ??
+    ''
+  const romMatch = romSpec.match(/\/\s*(\d+)\s*(GB|TB)/i)
+  const selected = romMatch ? `${romMatch[1]} ${romMatch[2].toUpperCase()}` : ''
+  const brand = productBrand(product)
+  const pool =
+    product.category === 'laptop'
+      ? ['256 GB', '512 GB', '1 TB']
+      : product.category === 'tablet'
+        ? brand === 'ipad'
+          ? ['128 GB', '256 GB', '512 GB', '1 TB']
+          : ['128 GB', '256 GB', '512 GB']
+        : brand === 'apple'
+          ? ['128 GB', '256 GB', '512 GB', '1 TB']
+          : ['128 GB', '256 GB', '512 GB']
+  const labels = selected && !pool.includes(selected) ? [selected, ...pool] : pool
+  const storages = labels.slice(0, 4).map((label) => ({ label, active: label === selected }))
+
+  const palettes: Record<string, string[]> = {
+    apple: ['#6B1C2A', '#B8C9D4', '#2C2C2C', '#D9D4CE'],
+    samsung: ['#1C1C1C', '#C5A46E', '#4B7BBE', '#E8E4DC'],
+    xiaomi: ['#1A1A1A', '#2F6FED', '#C0C0C0', '#E6E6E6'],
+    oppo: ['#F5F5F0', '#1A1A1A', '#5B8DEF', '#C4A574'],
+    vivo: ['#E8B4B8', '#2D2D2D', '#9BB7D4', '#F2F2F2'],
+    realme: ['#FFCC00', '#1A1A1A', '#3D7EAA', '#E8E8E8'],
+    nokia: ['#124191', '#1A1A1A', '#C0C0C0'],
+    asus: ['#1A1A1A', '#00A3E0', '#C0C0C0', '#E8E8E8'],
+    hp: ['#0096D6', '#1A1A1A', '#C0C0C0', '#F2F2F2'],
+    dell: ['#007DB8', '#1A1A1A', '#C0C0C0'],
+    macbook: ['#2C2C2C', '#B8C9D4', '#D9D4CE', '#6B1C2A'],
+    lenovo: ['#E2231A', '#1A1A1A', '#C0C0C0'],
+    acer: ['#83B81A', '#1A1A1A', '#C0C0C0'],
+    msi: ['#C8102E', '#1A1A1A', '#C0C0C0'],
+    gigabyte: ['#E31E24', '#1A1A1A', '#C0C0C0'],
+    ipad: ['#2C2C2C', '#B8C9D4', '#D9D4CE', '#6B1C2A'],
+    motorola: ['#5C5C5C', '#1A1A1A', '#C0C0C0'],
+    honor: ['#111111', '#C0C0C0', '#4A90D9'],
+  }
+
+  return {
+    specChips,
+    storages,
+    defaultStorage: selected,
+    colors: palettes[productBrand(product)] ?? ['#1A1A1A', '#C0C0C0', '#4A90D9'],
+  }
+}
+
+const STORAGE_PRICE: Record<string, number> = {
+  '128 GB': 0,
+  '256 GB': 3_000_000,
+  '512 GB': 7_000_000,
+  '1 TB': 15_000_000,
+  '2 TB': 23_000_000,
+}
+
+export function listingPrice(product: Product, storage: string) {
+  const base = listingMeta(product).defaultStorage
+  const delta = (STORAGE_PRICE[storage] ?? 0) - (STORAGE_PRICE[base] ?? 0)
+  return Math.max(product.price + delta, 990_000)
+}
+
+export function listingName(product: Product, storage: string) {
+  const compact = storage.replace(' ', '')
+  if (/(\d+\s*GB|\d+\s*TB)/i.test(product.name)) {
+    return product.name.replace(/(\d+\s*GB|\d+\s*TB)(?!.*\d+\s*(GB|TB))/i, compact)
+  }
+  return `${product.name} ${compact}`
 }
 
 export function promoMeta(product: Product) {

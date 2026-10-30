@@ -41,6 +41,11 @@ public class AuthSecurityAdapter implements AuthSecurityPort {
     }
 
     @Override
+    public boolean matchesPassword(String rawPassword, String encodedPassword) {
+        return passwordEncoder.matches(rawPassword, encodedPassword);
+    }
+
+    @Override
     public String generateAccessToken(Account account) {
         return jwtService.generateAccessToken(account);
     }

@@ -2,29 +2,33 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import BuyButton from '@/components/product/BuyButton'
+import PausedNotice from '@/components/product/PausedNotice'
 import ShopShell from '@/components/site/ShopShell'
-import {
-  PRODUCTS,
-  categoryLabel,
-  discountPercent,
-  formatVnd,
-  getProductBySlug,
-} from '@/lib/products'
+import { fetchProductBySlug } from '@/lib/catalog'
+import { categoryLabel, discountPercent, formatVnd } from '@/lib/products'
+
+export const dynamic = 'force-dynamic'
 
 type ProductDetailPageProps = {
   params: Promise<{ slug: string }>
 }
 
-export function generateStaticParams() {
-  return PRODUCTS.map((product) => ({ slug: product.slug }))
-}
-
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { slug } = await params
-  const product = getProductBySlug(slug)
+  const product = await fetchProductBySlug(slug)
   if (!product) notFound()
 
   const discount = discountPercent(product)
+
+  if (product.category === 'tv') {
+    return (
+      <ShopShell activeCategory="tv">
+        <main className="mx-auto flex w-full max-w-[1200px] flex-1 flex-col pb-5 pt-3">
+          <PausedNotice title={product.name} />
+        </main>
+      </ShopShell>
+    )
+  }
 
   return (
     <ShopShell activeCategory={product.category}>

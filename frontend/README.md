@@ -13,4 +13,4 @@ npm run dev
 
 Mở http://localhost:3000
 
-Backend chưa có. `NEXT_PUBLIC_API_URL` để trống để sau này gọi API qua proxy `/api` → `http://localhost:8080`.
+`NEXT_PUBLIC_API_URL` để trống: browser gọi `/api` rồi Next rewrite sang `http://localhost:8081`. Server component gọi thẳng backend `8081`.

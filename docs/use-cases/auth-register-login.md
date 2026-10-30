@@ -23,4 +23,5 @@ Allow a customer to create an account and let customer, seller, and admin authen
 - `GET /api/auth/session`
 
 ## Current implementation notes
+Register also sets JWT cookies so the customer is signed in immediately.
 Email verification and password reset are not implemented yet.

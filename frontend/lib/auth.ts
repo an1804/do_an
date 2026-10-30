@@ -12,12 +12,14 @@ export type AuthUser = {
   role: UserRole
   email?: string
   fullName?: string
+  phone?: string
 }
 
 type AuthApiUser = {
   role?: string
   email?: string
   fullName?: string
+  phone?: string
 }
 
 const AUTH_MESSAGE_MAP: Record<string, string> = {
@@ -33,6 +35,18 @@ const AUTH_MESSAGE_MAP: Record<string, string> = {
   'Tai khoan da bi vo hieu hoa': 'Tài khoản đã bị vô hiệu hóa.',
   'Phien dang nhap khong hop le': 'Phiên đăng nhập không hợp lệ.',
   'Du lieu khong hop le': 'Dữ liệu không hợp lệ.',
+  'Da gui ma xac nhan toi email': 'Đã gửi mã xác nhận tới email.',
+  'Ma xac nhan khong duoc de trong': 'Vui lòng nhập mã xác nhận.',
+  'Ma xac nhan phai gom 6 so': 'Mã xác nhận phải gồm 6 số.',
+  'Ma xac nhan khong dung': 'Mã xác nhận không đúng.',
+  'Ma xac nhan khong hop le hoac da het han': 'Mã xác nhận không hợp lệ hoặc đã hết hạn.',
+  'Ma xac nhan da het luot thu. Hay gui lai ma': 'Mã xác nhận đã hết lượt thử. Hãy gửi lại mã.',
+  'Vui long doi truoc khi gui lai ma': 'Vui lòng đợi trước khi gửi lại mã.',
+  'Khong tim thay yeu cau dang ky. Hay dien lai form.': 'Không tìm thấy yêu cầu đăng ký. Hãy điền lại form.',
+  'Chua cau hinh email. Dat MAIL_USERNAME va MAIL_PASSWORD.':
+    'Chưa cấu hình email. Đặt MAIL_USERNAME và MAIL_PASSWORD trên server.',
+  'Khong gui duoc email xac nhan. Vui long thu lai.': 'Không gửi được email xác nhận. Vui lòng thử lại.',
+  'So dien thoai nay dang cho xac nhan': 'Số điện thoại này đang chờ xác nhận.',
 }
 
 export function getApiErrorMessage(error: unknown, fallback: string) {
@@ -83,13 +97,23 @@ export function getAccountPath(role: UserRole) {
   return '/customer/dashboard'
 }
 
-export const registerCustomer = async (payload: {
+export const requestRegisterOtp = async (payload: {
   fullName: string
   email: string
   phone: string
   password: string
 }) => {
   await api.post('/api/auth/register', payload)
+}
+
+export const resendRegisterOtp = async (email: string) => {
+  await api.post('/api/auth/register/resend', { email })
+}
+
+export const verifyRegisterOtp = async (email: string, code: string) => {
+  const response = await api.post<AuthApiUser>('/api/auth/register/verify', { email, code })
+  rememberAuthSession()
+  return normalizeAuthUser(response.data)
 }
 
 export const loginSession = async (email: string, password: string) => {

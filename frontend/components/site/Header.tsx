@@ -7,7 +7,7 @@ import { useAuth } from '@/contexts/AuthContext'
 import { getAccountPath } from '@/lib/auth'
 
 export default function Header() {
-  const { user, isLoading, logout } = useAuth()
+  const { user, isLoading, logout, openAuthPrompt } = useAuth()
   const accountPath = user ? getAccountPath(user.role) : '/login'
 
   return (
@@ -24,18 +24,20 @@ export default function Header() {
               <UserIcon />
               <span className="hidden lg:inline">{user.fullName || user.email}</span>
             </Link>
-            <button type="button" onClick={() => void logout('/')} className="hidden hover:underline lg:inline">
+            <button type="button" onClick={() => void logout('/')} className="hidden cursor-pointer hover:underline lg:inline">
               Đăng xuất
             </button>
           </>
         ) : (
-          <Link
-            href="/login"
-            className={`flex items-center gap-1 ${isLoading ? 'pointer-events-none opacity-60' : 'hover:underline'}`}
+          <button
+            type="button"
+            onClick={openAuthPrompt}
+            disabled={isLoading}
+            className={`flex cursor-pointer items-center gap-1 ${isLoading ? 'pointer-events-none opacity-60' : 'hover:underline'}`}
           >
             <UserIcon />
             <span className="hidden lg:inline">Đăng nhập</span>
-          </Link>
+          </button>
         )}
         <Link href="/vouchers" className="flex items-center gap-1 hover:underline">
           <VoucherIcon />

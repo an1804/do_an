@@ -62,8 +62,10 @@ public class SecurityConfig {
                 .exceptionHandling(exceptions -> exceptions.authenticationEntryPoint(unauthenticatedHandler))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.GET, "/", "/api/health").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/categories", "/api/products", "/api/products/*").permitAll()
                         .requestMatchers(
                                 "/api/auth/register",
+                                "/api/auth/register/**",
                                 "/api/auth/login",
                                 "/api/auth/refresh",
                                 "/api/auth/logout"

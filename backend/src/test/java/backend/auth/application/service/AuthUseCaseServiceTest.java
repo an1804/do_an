@@ -1,10 +1,14 @@
 package backend.auth.application.service;
 
 import backend.auth.application.model.AuthResult;
+import backend.auth.application.model.RegisterOtpChallenge;
 import backend.auth.application.port.in.command.LoginCommand;
 import backend.auth.application.port.in.command.RegisterCustomerCommand;
+import backend.auth.application.port.in.command.VerifyRegisterOtpCommand;
 import backend.auth.application.port.out.AuthAccountPort;
+import backend.auth.application.port.out.AuthMailPort;
 import backend.auth.application.port.out.AuthSecurityPort;
+import backend.auth.application.port.out.RegisterOtpPort;
 import backend.auth.domain.model.Account;
 import backend.auth.domain.model.Role;
 import backend.shared.exception.AuthException;
@@ -18,52 +22,78 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class AuthUseCaseServiceTest {
 
     private FakeAccountPort accountPort;
     private FakeSecurityPort securityPort;
+    private FakeOtpPort otpPort;
+    private FakeMailPort mailPort;
     private AuthUseCaseService useCase;
 
     @BeforeEach
     void setUp() {
         accountPort = new FakeAccountPort();
         securityPort = new FakeSecurityPort();
-        useCase = new AuthUseCaseService(accountPort, securityPort);
+        otpPort = new FakeOtpPort();
+        mailPort = new FakeMailPort();
+        useCase = new AuthUseCaseService(accountPort, securityPort, otpPort, mailPort);
     }
 
     @Test
-    void registerCreatesCustomerAccount() {
-        AuthResult result = useCase.register(new RegisterCustomerCommand(
-                "Nguyen Van A",
-                "a@example.com",
-                "0901234567",
-                "secret1"
-        ));
+    void registerSendsOtpThenCreatesAccountAfterVerify() {
+        useCase.requestOtp(new RegisterCustomerCommand("Nguyen Van A", "a@example.com", "0901234567", "secret1"));
+
+        assertNotNull(mailPort.lastCode);
+        assertEquals("a@example.com", mailPort.lastEmail);
+
+        AuthResult result = useCase.verifyOtp(new VerifyRegisterOtpCommand("a@example.com", mailPort.lastCode));
 
         assertEquals("CUSTOMER", result.role());
         assertEquals("a@example.com", result.email());
         assertEquals("Nguyen Van A", result.fullName());
+        assertEquals("access-a@example.com", result.accessToken());
+        assertEquals("refresh-a@example.com", result.refreshToken());
     }
 
     @Test
     void registerRejectsDuplicateEmail() {
-        useCase.register(new RegisterCustomerCommand("A", "a@example.com", "0901234567", "secret1"));
+        registerVerified("A", "a@example.com", "0901234567", "secret1");
 
         AuthException ex = assertThrows(AuthException.class, () ->
-                useCase.register(new RegisterCustomerCommand("B", "a@example.com", "0909999999", "secret1")));
+                useCase.requestOtp(new RegisterCustomerCommand("B", "a@example.com", "0909999999", "secret1")));
         assertEquals("Email nay da duoc dang ky", ex.getMessage());
     }
 
     @Test
+    void verifyRejectsWrongOtp() {
+        useCase.requestOtp(new RegisterCustomerCommand("A", "a@example.com", "0901234567", "secret1"));
+
+        AuthException ex = assertThrows(AuthException.class, () ->
+                useCase.verifyOtp(new VerifyRegisterOtpCommand("a@example.com", "000000")));
+        assertEquals("Ma xac nhan khong dung", ex.getMessage());
+    }
+
+    @Test
     void loginReturnsTokensForEnabledAccount() {
-        useCase.register(new RegisterCustomerCommand("A", "a@example.com", "0901234567", "secret1"));
+        registerVerified("A", "a@example.com", "0901234567", "secret1");
 
         AuthResult result = useCase.login(new LoginCommand("a@example.com", "secret1"));
 
         assertEquals("access-a@example.com", result.accessToken());
         assertEquals("refresh-a@example.com", result.refreshToken());
+        assertEquals("CUSTOMER", result.role());
+    }
+
+    @Test
+    void loginAcceptsCustomerPhone() {
+        registerVerified("A", "a@example.com", "0901234567", "secret1");
+
+        AuthResult result = useCase.login(new LoginCommand("0901234567", "secret1"));
+
+        assertEquals("access-a@example.com", result.accessToken());
         assertEquals("CUSTOMER", result.role());
     }
 
@@ -81,6 +111,11 @@ class AuthUseCaseServiceTest {
         securityPort.failAuthenticate = true;
         assertThrows(BadCredentialsException.class, () ->
                 useCase.login(new LoginCommand("missing@example.com", "secret1")));
+    }
+
+    private void registerVerified(String name, String email, String phone, String password) {
+        useCase.requestOtp(new RegisterCustomerCommand(name, email, phone, password));
+        useCase.verifyOtp(new VerifyRegisterOtpCommand(email, mailPort.lastCode));
     }
 
     private static final class FakeAccountPort implements AuthAccountPort {
@@ -101,6 +136,21 @@ class AuthUseCaseServiceTest {
         @Override
         public Optional<Account> loadByEmail(String email) {
             return Optional.ofNullable(byEmail.get(email.toLowerCase()));
+        }
+
+        @Override
+        public Optional<Account> loadByCustomerPhone(String phone) {
+            String email = phones.get(phone);
+            return email == null ? Optional.empty() : Optional.ofNullable(byEmail.get(email));
+        }
+
+        @Override
+        public Optional<String> findCustomerPhoneByEmail(String email) {
+            String normalized = email.toLowerCase();
+            return phones.entrySet().stream()
+                    .filter(entry -> entry.getValue().equals(normalized))
+                    .map(Map.Entry::getKey)
+                    .findFirst();
         }
 
         @Override
@@ -129,6 +179,41 @@ class AuthUseCaseServiceTest {
         }
     }
 
+    private static final class FakeOtpPort implements RegisterOtpPort {
+        private final Map<String, RegisterOtpChallenge> byEmail = new HashMap<>();
+
+        @Override
+        public void save(RegisterOtpChallenge challenge) {
+            byEmail.put(challenge.email().toLowerCase(), challenge);
+        }
+
+        @Override
+        public Optional<RegisterOtpChallenge> findByEmail(String email) {
+            return Optional.ofNullable(byEmail.get(email.toLowerCase()));
+        }
+
+        @Override
+        public Optional<RegisterOtpChallenge> findByPhone(String phone) {
+            return byEmail.values().stream().filter(item -> item.phone().equals(phone)).findFirst();
+        }
+
+        @Override
+        public void deleteByEmail(String email) {
+            byEmail.remove(email.toLowerCase());
+        }
+    }
+
+    private static final class FakeMailPort implements AuthMailPort {
+        String lastEmail;
+        String lastCode;
+
+        @Override
+        public void sendRegisterOtp(String toEmail, String fullName, String code) {
+            lastEmail = toEmail;
+            lastCode = code;
+        }
+    }
+
     private static final class FakeSecurityPort implements AuthSecurityPort {
         boolean failAuthenticate;
 
@@ -142,6 +227,11 @@ class AuthUseCaseServiceTest {
         @Override
         public String encodePassword(String rawPassword) {
             return "encoded-" + rawPassword;
+        }
+
+        @Override
+        public boolean matchesPassword(String rawPassword, String encodedPassword) {
+            return encodedPassword.equals("encoded-" + rawPassword);
         }
 
         @Override
